@@ -10,7 +10,22 @@ const nextConfig = {
 
     return config;
   },
-  // Add env { API_KEY: process.env.API_KEY}
+  env: {
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    SERPAPI_API_KEY: process.env.SERPAPI_API_KEY,
+    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+    PINECONE_API_KEY: process.env.PINECONE_API_KEY,
+    PINECONE_ENV: process.env.PINECONE_ENV,
+    PINECONE_INDEX: process.env.PINECONE_INDEX,
+    GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+    SUPABASE_URL: process.env.SUPABASE_URL,
+    SUPABASE_PRIVATE_KEY: process.env.SUPABASE_PRIVATE_KEY,
+  },
+  // To fix Reference Error from content-generator: https://github.com/vercel/next.js/issues/40399
+  experimental: {
+    browsersListForSwc: true,
+    legacyBrowsers: false,
+  },
 };
 
 module.exports = nextConfig;
