@@ -15,7 +15,6 @@ import TwoColumnLayout from "../components/TwoColumnLayout";
  *
  */
 const ContentGenerator = () => {
-  // Follw up: Write me a tweet about pedro pascal.
   const [prompt, setPrompt] = useState(
     "https://www.youtube.com/watch?v=O_9JoimRj8w"
   );
@@ -35,7 +34,6 @@ const ContentGenerator = () => {
     setTopic(e.target.value);
   };
 
-  // Make sure to change the API route
   const handleSubmit = async () => {
     try {
       // Push the user's message into the messages array
